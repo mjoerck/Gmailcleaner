@@ -1,0 +1,6 @@
+function cleanMail() {
+  var threads = GmailApp.search('label:inbox is:read older_than:2d');
+  for (var i = 0; i < threads.length; i++) {
+    threads[i].moveToTrash();
+}
+}
